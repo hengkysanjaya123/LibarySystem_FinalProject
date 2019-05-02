@@ -11,16 +11,17 @@ class LibrarySystem{
 		list<User> listUser;
 //		list<Book> listBook;
 	public:
-		list<User> getListUser(){
-			return this->listUser;
+		list<User>* getListUser(){
+			return &(this->listUser);
 		}
+		
 		template<class T>
-		void add(T obj, list<T> list){
+		void add(T obj, list<T>& list){
 			list.push_back(obj);
 		}
 		
 		template<class T>
-		void remove(T obj, list<T> list){
+		void remove(T obj, list<T>& list){
 			list.remove(obj);	
 		}
 		

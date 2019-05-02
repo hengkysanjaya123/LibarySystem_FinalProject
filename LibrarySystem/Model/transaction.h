@@ -1,4 +1,5 @@
 #include <string>
+using namespace std;
 
 class Transaction
 {
@@ -13,4 +14,4 @@ class Transaction
 		Transaction(string user,string status, string date, string review){
 			
 		}
-}
+};

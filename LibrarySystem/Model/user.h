@@ -14,6 +14,7 @@ class User
 		string level;
 	
 	public:
+		User();
 		User(string n, string u, string p, string r);
 		void setName(string name);
 		string getName();
