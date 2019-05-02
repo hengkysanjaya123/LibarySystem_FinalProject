@@ -1,11 +1,20 @@
-<<<<<<< HEAD
+#include "category.h"
 
-class Category{
-=======
-#include <iostream>
+Category::Category()
+{
+}
 
-class Category{
-	private:
-		string name;
->>>>>>> 68bd0c010af76862f8ed4e8a0401ab4889c6680a
-};
+Category::Category(string name)
+{
+	this->name = name;
+}
+
+void Category::setName(string name)
+{
+	this->name = name;
+}
+
+string Category::getName()
+{
+	return this->name;
+}
