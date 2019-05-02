@@ -18,3 +18,5 @@ string Category::getName()
 {
 	return this->name;
 }
+
+
