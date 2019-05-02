@@ -12,7 +12,7 @@ int main()
 	ls.add(User("", "", "", ""), *ls.getListUser());
 	ls.add(User("", "", "", ""), *ls.getListUser());
 	
-	ls.remove(User("", "", "", ""), *ls.getListUser());
+	//ls.remove(User("", "", "", ""), *ls.getListUser());
 	
 	cout << ls.getListUser()->size();
 	cout << "hello";
