@@ -6,7 +6,8 @@ class Transaction
 		string user;
 		string status;
 		string date;
-		string review;
+		string testing;
+		string review2;
 	
 	public:
 		Transaction(string user,string status, string date, string review){
