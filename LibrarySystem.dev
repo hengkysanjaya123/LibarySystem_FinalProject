@@ -1,6 +1,6 @@
 [Project]
 FileName=LibrarySystem.dev
-Name=Project5
+Name=Project2
 Type=1
 Ver=2
 ObjFiles=
@@ -27,8 +27,9 @@ CommandLine=
 Folders=
 IncludeVersionInfo=0
 SupportXPThemes=0
-CompilerSet=4
-CompilerSettings=0000000100000000001000000
+CompilerSet=1
+CompilerSettings=0000000000000000001000000
+UnitCount=3
 
 [VersionInfo]
 Major=1
@@ -48,4 +49,34 @@ ProductName=
 ProductVersion=
 AutoIncBuildNr=0
 SyncProduct=1
+
+[Unit1]
+FileName=LibrarySystem\main.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit2]
+FileName=LibrarySystem\Model\user.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit3]
+FileName=LibrarySystem\Model\book.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
 
