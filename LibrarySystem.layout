@@ -1,19 +1,28 @@
 [Editors]
-Order=3
-Focused=3
+<<<<<<< HEAD
+Order=3,1
+=======
+Order=1,3
+>>>>>>> 68bd0c010af76862f8ed4e8a0401ab4889c6680a
+Focused=1
 [Editor_0]
-CursorCol=1
-CursorRow=4
+CursorCol=2
+CursorRow=7
 TopLine=1
 LeftChar=1
 [Editor_1]
-CursorCol=1
-CursorRow=1
+CursorCol=2
+CursorRow=3
 TopLine=1
 LeftChar=1
 [Editor_2]
 CursorCol=1
-CursorRow=1
+CursorRow=3
+TopLine=1
+LeftChar=1
+[Editor_3]
+CursorCol=1
+CursorRow=2
 TopLine=1
 LeftChar=1
 [Editor_3]
