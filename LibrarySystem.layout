@@ -1,7 +1,7 @@
 [Editors]
 <<<<<<< HEAD
 <<<<<<< HEAD
-Order=4,3,2,5,6,7
+Order=4,3,2,5,6,7,1
 =======
 Order=1,0,3
 >>>>>>> dc5ab5c4a25b635fa71bf6d0c44810223596d750
@@ -15,14 +15,14 @@ CursorRow=13
 TopLine=1
 LeftChar=1
 [Editor_1]
-CursorCol=15
-CursorRow=10
-TopLine=1
+CursorCol=1
+CursorRow=17
+TopLine=7
 LeftChar=1
 [Editor_2]
 CursorCol=1
 CursorRow=7
-TopLine=1
+TopLine=10
 LeftChar=1
 [Editor_3]
 <<<<<<< HEAD
@@ -48,16 +48,16 @@ LeftChar=1
 [Editor_5]
 CursorCol=22
 CursorRow=53
-TopLine=1
+TopLine=22
 LeftChar=1
 [Editor_6]
-CursorCol=1
-CursorRow=2
+CursorCol=4
+CursorRow=29
 TopLine=1
 LeftChar=1
 [Editor_7]
-CursorCol=24
-CursorRow=1
+CursorCol=1
+CursorRow=6
 =======
 CursorCol=2
 CursorRow=16
