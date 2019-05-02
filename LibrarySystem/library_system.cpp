@@ -22,7 +22,12 @@ class LibrarySystem{
 		
 		template<class T>
 		void remove(T obj, list<T>& list){
-			list.remove(obj);	
+			for(int i = 0;i < list.size();i++){
+				if(list[i] == obj){
+					list.remove(list[i]);
+					break;
+				}
+			}
 		}
 		
 		template<class T>

@@ -1,5 +1,9 @@
 #include "user.h"
 
+User::User(){
+	
+}
+
 User::User(string n, string u, string p, string r){
 	name = n;
 	username = u;
