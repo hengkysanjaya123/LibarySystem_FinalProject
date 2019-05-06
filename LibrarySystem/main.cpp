@@ -7,5 +7,5 @@ using namespace std;
 int main()
 {
 	LibrarySystemUI ui;
-	ui.run();	
+	ui.run();
 }

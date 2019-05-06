@@ -1,8 +1,7 @@
 #include <iostream>
-#include <list>
 #include <vector>
 
-//#include "book.h"
+#include "Model/book.h"
 #include "Model/user.h"
 
 using namespace std;
@@ -10,8 +9,9 @@ using namespace std;
 class LibrarySystem{
 	private:
 		vector<User> listUser;
-//		list<Book> listBook;
+		vector<Book> listBook;
 	public:
+		// -- User operations --
 		void addUser(User u){
 			listUser.push_back(u);
 		}
@@ -29,6 +29,39 @@ class LibrarySystem{
 		
 		vector<User> getListUser(){
 			return listUser;
+		}
+		
+		// -- Login --
+		bool doLogin(string username, string password, User& u){
+			for(int i= 0 ; i < listUser.size();i++){
+				User cur = listUser[i];
+				if(cur.getUsername() == username && cur.getPassword() == password){
+					u = cur;
+					return true;
+				}
+			}
+			return false;
+		}
+		
+		// -- Book operations --
+		
+		void addBook(Book b){
+			listBook.push_back(b);
+		}
+		
+		void removeBook(int position){
+			listBook.erase(listBook.begin() + position);
+		}
+		
+		void updateBook(int position,Book b){
+			
+		}
+		
+		void displayBooks(){
+			printf("%-20s | %-20s | %-20s | %-20s |\n", "Name", "Author", "Stock", "Rating");
+			for(int i = 0 ; i < listBook.size();i++){
+				printf("%-20s | %-20s | %-20d | %-20d |\n", listBook[i].getName().c_str(),listBook[i].getAuthor().c_str() , listBook[i].getStock(), listBook[i].getRating());
+			}
 		}
 		
 		
