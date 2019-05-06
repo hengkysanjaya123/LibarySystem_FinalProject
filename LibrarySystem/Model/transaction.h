@@ -33,8 +33,10 @@ class Transaction
 		string status;
 		string date;
 		string review;
+
 	
 };
 
 #endif
+
 
