@@ -19,10 +19,10 @@ Order=1,3
 <<<<<<< HEAD
 Focused=10
 [Editor_0]
-CursorCol=32
+CursorCol=2
 =======
 Focused=0
-CursorRow=3
+CursorRow=8
 TopLine=1
 LeftChar=1
 [Editor_0]

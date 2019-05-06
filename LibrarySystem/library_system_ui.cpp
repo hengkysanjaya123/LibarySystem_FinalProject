@@ -69,49 +69,59 @@ class LibrarySystemUI{
 					
 					// book
 					if(option == 1){
-						cout << "Book CRUD" << endl
-							<< "1. Insert" << endl
-					 		<< "2. Update" << endl
-					 		<< "3. Delete" << endl
-					 		<< "4. Search" << endl
-					 		<< "5. View all" << endl;
-					 		
-					 	cin >> option;
-					 	// insert book
-					 	if(option == 1){
-					 		string b_name, b_author;
-							int b_stock;
-					 		
-					 		cout << "book's name >>";
-					 		cin.ignore();
-					 		getline(cin, b_name);
-					 		
-					 		cout << "book's author >>";
-					 		cin.ignore();
-					 		getline(cin, b_author);
-					 		
-					 		cout << "book's stock >>";
-					 		cin >> b_stock;
-					 		
-					 		ls.addBook(Book(b_name, b_author, b_stock));
-					 		
-					 		cout << "~ Book added successfully ~" << endl;
-						}
-						// update book
-						else if(option == 2){
-							
-						}
-						// delete book
-						else if(option == 3){
-							
-						}
-						// search book
-						else if(option == 4){
-							
-						}
-						// view all book
-						else if(option == 5){
-							ls.displayBooks();
+						while(true){
+							cout << "Book CRUD" << endl
+								<< "1. Insert" << endl
+						 		<< "2. Update" << endl
+						 		<< "3. Delete" << endl
+						 		<< "4. Search" << endl
+						 		<< "5. View all" << endl
+						 		<< "6. Back to menu" << endl;
+						 		
+						 	cin >> option;
+						 	// insert book
+						 	if(option == 1){
+						 		string b_name, b_author;
+								int b_stock;
+						 		
+						 		cout << "book's name >>";
+						 		cin.ignore();
+						 		getline(cin, b_name);
+						 		
+						 		cout << "book's author >>";
+						 		cin.ignore();
+						 		getline(cin, b_author);
+						 		
+						 		cout << "book's stock >>";
+						 		cin >> b_stock;
+						 		
+						 		ls.addBook(Book(b_name, b_author, b_stock));
+						 		
+						 		cout << "~ Book added successfully ~" << endl;
+							}
+							// update book
+							else if(option == 2){
+								
+							}
+							// delete book
+							else if(option == 3){
+								
+							}
+							// search book
+							else if(option == 4){
+								
+							}
+							// view all book
+							else if(option == 5){
+								ls.displayBooks();
+							}
+							// back to menu
+							else if(option == 6){
+								break;
+							}
+							else{
+								cout << "Wrong Input" << endl;
+							}
 						}
 					} 
 					// category
