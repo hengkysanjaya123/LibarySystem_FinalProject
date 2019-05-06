@@ -2,7 +2,6 @@
 #define TRANSACTION_H
 
 #include <string>
-
 #include "user.h"
 #include "book.h"
 
@@ -34,6 +33,10 @@ class Transaction
 		string status;
 		string date;
 		string review;
+
+	
 };
 
 #endif
+
+
