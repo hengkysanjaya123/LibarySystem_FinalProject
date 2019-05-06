@@ -62,15 +62,19 @@ class LibrarySystemUI{
 			 		cout << "-- Add New User --" << endl;
 			 		
 			 		cout << "name >>";
+			 		cin.ignore();
 			 		getline(cin, name);
 			 		
 			 		cout << "username >>";
+			 		cin.ignore();
 			 		getline(cin, username);
 			 		
 			 		cout << "password >>";
+			 		cin.ignore();
 			 		getline(cin, password);
 			 		
 			 		cout << "confirm password >>";
+			 		cin.ignore();
 			 		getline(cin, confirm_password);
 			 		// check confirm password & password
 			 		
