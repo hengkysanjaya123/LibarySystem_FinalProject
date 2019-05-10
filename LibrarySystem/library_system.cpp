@@ -1,68 +1,62 @@
-#include <iostream>
-#include <vector>
+#include "library_system.h"
 
-#include "Model/book.h"
-#include "Model/user.h"
-
-using namespace std;
-
-class LibrarySystem{
-	private:
-		vector<User> listUser;
-		vector<Book> listBook;
-	public:
+LibrarySystem::LibrarySystem(){
+}
 		// -- User operations --
-		void addUser(User u){
-			listUser.push_back(u);
-		}
+void LibrarySystem::addUser(User u){
+	listUser.push_back(u);
+}
 		
-		void removeUser(int position){
-			listUser.erase(listUser.begin() + position);
-		}
+void LibrarySystem::removeUser(int position){
+	listUser.erase(listUser.begin() + position);
+}
 		
-		void updateUser(int position,User u){
-			listUser[0].getName() = u.getName();	
-			listUser[0].getUsername() = u.getUsername();
-			listUser[0].getPassword() = u.getPassword();
-			listUser[0].getRole() = u.getRole();
-		}
+void LibrarySystem::updateUser(int position,User u){
+	listUser[0].getName() = u.getName();	
+	listUser[0].getUsername() = u.getUsername();
+	listUser[0].getPassword() = u.getPassword();
+	listUser[0].getRole() = u.getRole();
+}
 		
-		vector<User> getListUser(){
-			return listUser;
-		}
+vector<User> LibrarySystem::getListUser(){
+	return listUser;
+}
 		
 		// -- Login --
-		bool doLogin(string username, string password, User& u){
-			for(int i= 0 ; i < listUser.size();i++){
-				User cur = listUser[i];
-				if(cur.getUsername() == username && cur.getPassword() == password){
-					u = cur;
-					return true;
-				}
-			}
-			return false;
+bool LibrarySystem::doLogin(string username, string password, User& u){
+	for(int i= 0 ; i < listUser.size();i++){
+		User cur = listUser[i];
+		if(cur.getUsername() == username && cur.getPassword() == password){
+			u = cur;
+			return true;
 		}
+	}
+	return false;
+}
 		
 		// -- Book operations --
 		
-		void addBook(Book b){
-			listBook.push_back(b);
-		}
+void LibrarySystem::addBook(Book b){
+	listBook.push_back(b);
+}
 		
-		void removeBook(int position){
-			listBook.erase(listBook.begin() + position);
-		}
+void LibrarySystem::removeBook(int position){
+	listBook.erase(listBook.begin() + position);
+}
 		
-		void updateBook(int position,Book b){
-			
-		}
+void LibrarySystem::updateBook(int position,Book b){
+	listBook[position].setName(b.getName());
+	listBook[position].setAuthor(b.getAuthor());
+	listBook[position].setStock(b.getStock());
+	listBook[position].setRating(b.getRating());
+}
 		
-		void displayBooks(){
-			printf("%-20s | %-20s | %-20s | %-20s |\n", "Name", "Author", "Stock", "Rating");
-			for(int i = 0 ; i < listBook.size();i++){
-				printf("%-20s | %-20s | %-20d | %-20d |\n", listBook[i].getName().c_str(),listBook[i].getAuthor().c_str() , listBook[i].getStock(), listBook[i].getRating());
-			}
-		}
+void LibrarySystem::displayBooks(){
+	printf("%-20s | %-20s | %-20s | %-20s |\n", "Name", "Author", "Stock", "Rating");
+	for(int i = 0 ; i < listBook.size();i++){
+		printf("%-20s | %-20s | %-20d | %-20d |\n", listBook[i].getName().c_str(),listBook[i].getAuthor().c_str() , listBook[i].getStock(), listBook[i].getRating());
+	}
+}
 		
 		
 		
@@ -94,4 +88,4 @@ class LibrarySystem{
 //				}
 //			}
 //		}
-};
+

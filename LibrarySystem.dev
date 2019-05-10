@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=1
 CompilerSettings=0000000000000000001000000
-UnitCount=11
+UnitCount=13
 
 [VersionInfo]
 Major=1
@@ -141,7 +141,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit10]
-FileName=LibrarySystem\library_system.cpp
+FileName=LibrarySystem\library_system_ui.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -151,7 +151,27 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit11]
-FileName=LibrarySystem\library_system_ui.cpp
+FileName=LibrarySystem\library_system.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit12]
+FileName=LibrarySystem\library_system.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit13]
+FileName=LibrarySystem\library_system_ui.h
 CompileCpp=1
 Folder=
 Compile=1
