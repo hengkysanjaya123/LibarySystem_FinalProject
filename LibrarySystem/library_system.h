@@ -6,14 +6,13 @@
 
 #include "Model/book.h"
 #include "Model/user.h"
+#include "Model/category.h"
+#include "Model/transaction.h"
 
 using namespace std;
 
 class LibrarySystem{
 	
-	private:
-		vector<User> listUser;
-		vector<Book> listBook;
 	public:
 		// -- User operations --
 		LibrarySystem();
@@ -31,6 +30,22 @@ class LibrarySystem{
 		void removeBook(int position);
 		void updateBook(int position,Book b);
 		void displayBooks();
+		
+		// -- Category operations -- 
+		void addCategory(Category c);
+		void removeCategory(int position);
+		void displayCategories();
+		
+		// -- Transaction operations -- 
+		void addTransaction(Transaction t);
+		void updateTransactionStatus(int position, string s);
+		
+	private:
+		vector<User> listUser;
+		vector<Book> listBook;
+		vector<Category> listCategory;
+		vector<Transaction> listTransaction;
+		
 		
 		
 		

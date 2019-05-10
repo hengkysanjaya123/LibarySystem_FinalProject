@@ -12,10 +12,16 @@ void LibrarySystem::removeUser(int position){
 }
 		
 void LibrarySystem::updateUser(int position,User u){
-	listUser[0].getName() = u.getName();	
-	listUser[0].getUsername() = u.getUsername();
-	listUser[0].getPassword() = u.getPassword();
-	listUser[0].getRole() = u.getRole();
+//	listUser[0].getName() = u.getName();	
+//	listUser[0].getUsername() = u.getUsername();
+//	listUser[0].getPassword() = u.getPassword();
+//	listUser[0].getRole() = u.getRole();
+	listUser[position].setName(u.getName());
+	listUser[position].setAuthor(u.getUsername());
+	listUser[position].setStock(u.getPassword());
+	listUser[position].setRating(u.getRole());
+	listUser[position].setLevel(u.getLevel());
+
 }
 		
 vector<User> LibrarySystem::getListUser(){
@@ -58,7 +64,31 @@ void LibrarySystem::displayBooks(){
 	}
 }
 		
-		
+		// -- Category operations -- 
+
+void LibrarySystem::addCategory(Category c){
+	listCategory.push_back(c);
+}
+	
+void LibrarySystem::removeCategory(int position){
+	listCategory.erase(listCategory.begin()+position);
+}
+
+void LibrarySystem::displayCategories(){
+	
+	cout << "Categories\n"
+			"==========" << endl;
+	for (int i = 0; i<listCategory.size(); i++){
+		cout << listCategory[i].getName() << endl;
+	}
+}
+
+		// -- Transaction operations -- 
+
+void LibrarySystem::addTransaction(Transaction t){
+	listTransaction.push_back(t);
+}
+
 		
 //		list<User>* getListUser(){
 //			return &(this->listUser);
