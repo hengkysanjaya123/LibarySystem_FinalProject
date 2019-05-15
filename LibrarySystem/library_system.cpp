@@ -13,9 +13,9 @@ void LibrarySystem::removeUser(int position){
 		
 void LibrarySystem::updateUser(int position,User u){
 	listUser[position].setName(u.getName());
-	listUser[position].setAuthor(u.getUsername());
-	listUser[position].setStock(u.getPassword());
-	listUser[position].setRating(u.getRole());
+	listUser[position].setUsername(u.getUsername());
+	listUser[position].setPassword(u.getPassword());
+	listUser[position].setRole(u.getRole());
 	listUser[position].setLevel(u.getLevel());
 	cout << "x";
 }
