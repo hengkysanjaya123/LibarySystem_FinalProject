@@ -12,6 +12,11 @@
 using namespace std;
 
 class LibrarySystem{
+	private:
+		vector<User> listUser;
+		vector<Book> listBook;
+		vector<Category> listCategory;
+		vector<Transaction> listTransaction;
 	
 	public:
 		// -- User operations --
@@ -40,11 +45,7 @@ class LibrarySystem{
 		void addTransaction(Transaction t);
 		void updateTransactionStatus(int position, string s);
 		
-	private:
-		vector<User> listUser;
-		vector<Book> listBook;
-		vector<Category> listCategory;
-		vector<Transaction> listTransaction;
+
 		
 		
 		

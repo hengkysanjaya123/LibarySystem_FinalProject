@@ -12,10 +12,6 @@ void LibrarySystem::removeUser(int position){
 }
 		
 void LibrarySystem::updateUser(int position,User u){
-//	listUser[0].getName() = u.getName();	
-//	listUser[0].getUsername() = u.getUsername();
-//	listUser[0].getPassword() = u.getPassword();
-//	listUser[0].getRole() = u.getRole();
 	listUser[position].setName(u.getName());
 	listUser[position].setAuthor(u.getUsername());
 	listUser[position].setStock(u.getPassword());
@@ -83,8 +79,7 @@ void LibrarySystem::displayCategories(){
 	}
 }
 
-		// -- Transaction operations -- 
-
+// -- Transaction operations -- 
 void LibrarySystem::addTransaction(Transaction t){
 	listTransaction.push_back(t);
 }
