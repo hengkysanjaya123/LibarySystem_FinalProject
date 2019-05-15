@@ -21,7 +21,7 @@ void LibrarySystem::updateUser(int position,User u){
 	listUser[position].setStock(u.getPassword());
 	listUser[position].setRating(u.getRole());
 	listUser[position].setLevel(u.getLevel());
-
+	cout << "x";
 }
 		
 vector<User> LibrarySystem::getListUser(){
