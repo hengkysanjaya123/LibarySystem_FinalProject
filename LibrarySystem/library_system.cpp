@@ -89,7 +89,10 @@ void LibrarySystem::testing(int a) {
     cout << "testing something" << endl;
 }
 
-		
+void testfunc2(){
+    cout << 'h';
+}
+
 //		list<User>* getListUser(){
 //			return &(this->listUser);
 //		}
