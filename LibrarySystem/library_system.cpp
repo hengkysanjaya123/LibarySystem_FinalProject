@@ -84,6 +84,11 @@ void LibrarySystem::addTransaction(Transaction t){
 	listTransaction.push_back(t);
 }
 
+
+void LibrarySystem::testing(int a) {
+    cout << "testing something" << endl;
+}
+
 		
 //		list<User>* getListUser(){
 //			return &(this->listUser);

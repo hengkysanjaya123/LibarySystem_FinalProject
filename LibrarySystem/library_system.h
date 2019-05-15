@@ -44,7 +44,8 @@ class LibrarySystem{
 		// -- Transaction operations -- 
 		void addTransaction(Transaction t);
 		void updateTransactionStatus(int position, string s);
-		
+
+		void testing(int a);
 
 		
 		
