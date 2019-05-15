@@ -7,10 +7,12 @@ Book::Book()
 
 Book::Book(string name, string author, int stock)
 {
+    counter++;
 	this->name = name;
 	this->author = author;
 	this->stock = stock;
 	this->rating = 0;
+	this->id = counter;
 }
 
 void Book::setName(string name) 
@@ -53,5 +55,8 @@ float Book::getRating()
 	return this->rating;
 }
 
+int Book::getId() {
+    return this->id;
+}
 
 

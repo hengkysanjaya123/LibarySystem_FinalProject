@@ -96,7 +96,7 @@ void LibrarySystemUI::adminPage(User currentUser){
 					}
 					// update book
 					else if(suboption_book == 2){
-                        cout << "blac bla";
+
 					}
 					// delete book
 					else if(suboption_book == 3){
@@ -104,7 +104,16 @@ void LibrarySystemUI::adminPage(User currentUser){
 					}
 					// search book
 					else if(suboption_book == 4){
+					    int suboption_book_search;
+                        cout << "Search book by : "<< endl
+                             << "1. Name" << endl
+                             << "2. Author" << endl
+                             << ">>" ;
+                        cin >> suboption_book_search;
 
+                        for (int i = 0; i < ; ++i) {
+                            
+                        }
 					}
 					// view all book
 					else if(suboption_book == 5){
