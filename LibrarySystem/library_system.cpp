@@ -52,11 +52,55 @@ void LibrarySystem::updateBook(int position,Book b){
 	listBook[position].setStock(b.getStock());
 	listBook[position].setRating(b.getRating());
 }
+
+void LibrarySystem::searchBook(int id) {
+    for (int i = 0; i < listBook.size(); ++i) {
+        if(listBook[i].getId() == id){
+            return i;
+        }
+    }
+    return -1;
+}
+
+void LibrarySystem::searchBook() {
+    int suboption_book_search;
+    string key;
+    cout << "Search book by : "<< endl
+         << "1. Name" << endl
+         << "2. Author" << endl
+         << ">>" ;
+    cin >> suboption_book_search;
+
+    if(suboption_book_search == 1){
+        cout << "Input book name >>";
+        cin >> key;
+    }
+    else if(suboption_book_search == 2){
+        cout << "Input Author name >>";
+        cin >> key;
+    }
+
+    printf("%-20s | %-20s | %-20s | %-20s | %-20s |\n", "ID","Name", "Author", "Stock", "Rating");
+
+    for (int i = 0; i < listBook.size(); ++i) {
+        if(suboption_book_search == 1){
+            if(listBook[i].getName() == key){
+                printf("%-20s | %-20s | %-20s | %-20d | %-20d |\n", listBook[i].getId().c_str() ,listBook[i].getName().c_str(),listBook[i].getAuthor().c_str() , listBook[i].getStock(), listBook[i].getRating());
+            }
+        }
+        else if(suboption_book_search == 2){
+            if(listBook[i].getAuthor() == key){
+                printf("%-20s | %-20s | %-20s | %-20d | %-20d |\n", listBook[i].getId().c_str() ,listBook[i].getName().c_str(),listBook[i].getAuthor().c_str() , listBook[i].getStock(), listBook[i].getRating());
+            }
+        }
+    }
+    cout << endl;
+}
 		
 void LibrarySystem::displayBooks(){
-	printf("%-20s | %-20s | %-20s | %-20s |\n", "Name", "Author", "Stock", "Rating");
+	printf("%-20s | %-20s | %-20s | %-20s | %-20s |\n", "ID","Name", "Author", "Stock", "Rating");
 	for(int i = 0 ; i < listBook.size();i++){
-		printf("%-20s | %-20s | %-20d | %-20d |\n", listBook[i].getName().c_str(),listBook[i].getAuthor().c_str() , listBook[i].getStock(), listBook[i].getRating());
+		printf("%-20s | %-20s | %-20s | %-20d | %-20d |\n", listBook[i].getId().c_str() ,listBook[i].getName().c_str(),listBook[i].getAuthor().c_str() , listBook[i].getStock(), listBook[i].getRating());
 	}
 }
 		
@@ -87,6 +131,7 @@ void LibrarySystem::addTransaction(Transaction t){
 
 void LibrarySystem::testing(int a) {
     cout << "testing something" << endl;
+
 }
 
 void testfunc2(){

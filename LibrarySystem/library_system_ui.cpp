@@ -76,6 +76,7 @@ void LibrarySystemUI::adminPage(User currentUser){
 					cin >> suboption_book;
 					// insert book
 					if(suboption_book == 1){
+                        cout << "-- Insert book --" << endl;
 						string b_name, b_author;
 						int b_stock;
 						 		
@@ -96,6 +97,19 @@ void LibrarySystemUI::adminPage(User currentUser){
 					}
 					// update book
 					else if(suboption_book == 2){
+                        cout << "-- Update book --" << endl;
+                        ls.searchBook();
+
+                        cout << "Please input book's Id >>";
+                        int bookId;
+                        cin >> bookId;
+
+                        int pos = ls.searchBook(bookId);
+                        if(pos != -1){
+                            ls.updateBook()
+                        }else{
+                            cout << "Book not found";
+                        }
 
 					}
 					// delete book
@@ -104,19 +118,12 @@ void LibrarySystemUI::adminPage(User currentUser){
 					}
 					// search book
 					else if(suboption_book == 4){
-					    int suboption_book_search;
-                        cout << "Search book by : "<< endl
-                             << "1. Name" << endl
-                             << "2. Author" << endl
-                             << ">>" ;
-                        cin >> suboption_book_search;
-
-                        for (int i = 0; i < ; ++i) {
-                            
-                        }
+					    cout << "-- Search books --" << endl;
+                        ls.searchBook();
 					}
 					// view all book
 					else if(suboption_book == 5){
+                        cout << "-- View all books --" << endl;
 						ls.displayBooks();
 					}
 					// back to menu

@@ -34,6 +34,8 @@ class LibrarySystem{
 		void addBook(Book b);
 		void removeBook(int position);
 		void updateBook(int position,Book b);
+		void searchBook();
+		void searchBook(int id);
 		void displayBooks();
 		
 		// -- Category operations -- 
